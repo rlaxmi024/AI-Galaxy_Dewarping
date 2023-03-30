@@ -1,0 +1,68 @@
+running install
+running bdist_egg
+running egg_info
+running build_src
+build_src
+building extension "fastell4py._fastell" sources
+f2py options: []
+  adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fortranobject.c' to sources.
+  adding 'build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10' to include_dirs.
+  adding 'build/src.linux-x86_64-3.10/_fastell-f2pywrappers.f' to sources.
+build_src: building npy-pkg config files
+writing fastell4py.egg-info/PKG-INFO
+writing dependency_links to fastell4py.egg-info/dependency_links.txt
+writing namespace_packages to fastell4py.egg-info/namespace_packages.txt
+writing requirements to fastell4py.egg-info/requires.txt
+writing top-level names to fastell4py.egg-info/top_level.txt
+reading manifest file 'fastell4py.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+adding license file 'LICENSE'
+adding license file 'AUTHORS.rst'
+writing manifest file 'fastell4py.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-x86_64/egg
+running install_lib
+running build_py
+running build_ext
+customize UnixCCompiler
+customize UnixCCompiler using build_ext
+CCompilerOpt.__init__[765] : load cache from file -> /geode2/home/u050/lramesh/BigRed200/AI_galaxy_dewarping/fastell4py/build/temp.linux-x86_64-3.10/ccompiler_opt_cache_ext.py
+CCompilerOpt.__init__[776] : hit the file cache
+get_default_fcompiler: matching types: '['gnu95', 'intel', 'lahey', 'pg', 'nv', 'absoft', 'nag', 'vast', 'compaq', 'intele', 'intelem', 'gnu', 'g95', 'pathf95', 'nagfor', 'fujitsu']'
+customize Gnu95FCompiler
+Found executable /opt/cray/pe/gcc/11.2.0/bin/gfortran
+customize Gnu95FCompiler
+customize Gnu95FCompiler using build_ext
+building 'fastell4py._fastell' extension
+compiling C sources
+C compiler: /opt/gcc/10.3.0/bin/gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC
+
+compile options: '-Ibuild/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10 -I/N/soft/sles15/deeplearning/Python-3.10.2/lib/python3.10/site-packages/numpy/core/include -Ibuild/src.linux-x86_64-3.10/numpy/distutils/include -I/geode2/soft/hps/sles15/deeplearning/Python-3.10.2/Include -I/N/soft/sles15/deeplearning/Python-3.10.2 -c'
+gcc: build/src.linux-x86_64-3.10/_fastellmodule.c
+gcc: build/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10/fortranobject.c
+
+
+[Errno 2] No such file or directory: '/opt/gcc/10.3.0/bin/gcc'
+
+
+
+
+[Errno 2] No such file or directory: '/opt/gcc/10.3.0/bin/gcc'
+
+
+
+########### EXT COMPILER OPTIMIZATION ###########
+Platform      : 
+  Architecture: x64
+  Compiler    : gcc
+
+CPU baseline  : 
+  Requested   : 'min'
+  Enabled     : none
+  Flags       : none
+  Extra checks: none
+
+CPU dispatch  : 
+  Requested   : 'max -xop -fma4'
+  Enabled     : none
+  Generated   : none
+CCompilerOpt.cache_flush[809] : write cache to path -> /geode2/home/u050/lramesh/BigRed200/AI_galaxy_dewarping/fastell4py/build/temp.linux-x86_64-3.10/ccompiler_opt_cache_ext.py

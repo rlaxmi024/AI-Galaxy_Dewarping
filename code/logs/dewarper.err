@@ -1,0 +1,37 @@
+/N/soft/sles15/deeplearning/Python-3.10.2/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+/N/soft/sles15/deeplearning/Python-3.10.2/lib/python3.10/site-packages/setuptools/command/easy_install.py:144: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+/N/soft/sles15/deeplearning/Python-3.10.2/lib/python3.10/site-packages/setuptools/command/egg_info.py:623: SetuptoolsDeprecationWarning: Custom 'build_py' does not implement 'get_data_files_without_manifest'.
+Please extend command classes from setuptools instead of distutils.
+  warnings.warn(
+error: Command "/opt/gcc/10.3.0/bin/gcc -pthread -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -Ibuild/src.linux-x86_64-3.10/build/src.linux-x86_64-3.10 -I/N/soft/sles15/deeplearning/Python-3.10.2/lib/python3.10/site-packages/numpy/core/include -Ibuild/src.linux-x86_64-3.10/numpy/distutils/include -I/geode2/soft/hps/sles15/deeplearning/Python-3.10.2/Include -I/N/soft/sles15/deeplearning/Python-3.10.2 -c build/src.linux-x86_64-3.10/_fastellmodule.c -o build/temp.linux-x86_64-3.10/build/src.linux-x86_64-3.10/_fastellmodule.o -MMD -MF build/temp.linux-x86_64-3.10/build/src.linux-x86_64-3.10/_fastellmodule.o.d" failed with exit status 127
+Traceback (most recent call last):
+  File "/N/u/lramesh/BigRed200/.local/lib/python3.10/site-packages/lenstronomy/LensModel/Profiles/spemd.py", line 62, in __init__
+    from fastell4py import fastell4py
+ModuleNotFoundError: No module named 'fastell4py'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/geode2/home/u050/lramesh/BigRed200/AI_galaxy_dewarping/code/train_dewarper.py", line 9, in <module>
+    from src import dataset
+  File "/geode2/home/u050/lramesh/BigRed200/AI_galaxy_dewarping/code/src/dataset.py", line 140, in <module>
+    result = warped_galaxy_dataset.__getitem__(400)
+  File "/geode2/home/u050/lramesh/BigRed200/AI_galaxy_dewarping/code/src/dataset.py", line 71, in __getitem__
+    lens_model_class=LensModel(('PEMD', ), ),
+  File "/N/u/lramesh/BigRed200/.local/lib/python3.10/site-packages/lenstronomy/LensModel/lens_model.py", line 93, in __init__
+    self.lens_model = SinglePlane(lens_model_list,
+  File "/N/u/lramesh/BigRed200/.local/lib/python3.10/site-packages/lenstronomy/LensModel/profile_list_base.py", line 38, in __init__
+    self.func_list = self._load_model_instances(lens_model_list, custom_class=numerical_alpha_class,
+  File "/N/u/lramesh/BigRed200/.local/lib/python3.10/site-packages/lenstronomy/LensModel/profile_list_base.py", line 61, in _load_model_instances
+    lensmodel_class = self._import_class(lens_type, custom_class, kwargs_interp=kwargs_interp)
+  File "/N/u/lramesh/BigRed200/.local/lib/python3.10/site-packages/lenstronomy/LensModel/profile_list_base.py", line 146, in _import_class
+    return PEMD()
+  File "/N/u/lramesh/BigRed200/.local/lib/python3.10/site-packages/lenstronomy/LensModel/Profiles/pemd.py", line 52, in __init__
+    self.spemd_smooth = SPEMD(suppress_fastell=suppress_fastell)
+  File "/N/u/lramesh/BigRed200/.local/lib/python3.10/site-packages/lenstronomy/LensModel/Profiles/spemd.py", line 73, in __init__
+    raise ImportError("module fastell4py not installed. You can get it from here: "
+ImportError: module fastell4py not installed. You can get it from here: https://github.com/sibirrer/fastell4py Make sure you have a fortran compiler such that the installation works properly.
+srun: error: nid0673: task 0: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=1258033.0
